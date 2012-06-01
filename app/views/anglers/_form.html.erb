@@ -1,0 +1,25 @@
+<%= form_for(@angler) do |f| %>
+  <% if @angler.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@angler.errors.count, "error") %> prohibited this angler from being saved:</h2>
+
+      <ul>
+      <% @angler.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :boat_num %><br />
+    <%= f.number_field :boat_num %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

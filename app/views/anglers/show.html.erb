@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @angler.name %>
+</p>
+
+<p>
+  <b>Boat num:</b>
+  <%= @angler.boat_num %>
+</p>
+
+
+<%= link_to 'Edit', edit_angler_path(@angler) %> |
+<%= link_to 'Back', anglers_path %>
